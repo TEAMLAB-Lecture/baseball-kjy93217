@@ -310,6 +310,9 @@ def main():
                 one_more = True
                 while True:
                     yes_or_no = input('You win, one more (Y/N) ?')
+                    if yes_or_no == '0':
+                        one_more = -1
+                        break
                     if is_yes(yes_or_no):
                         one_more = 1
                         break
